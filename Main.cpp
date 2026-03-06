@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	srand(time(0));	// 난수 시드 초기화
+	srand(time(nullptr));	// 난수 시드 초기화
 
 	int ComputerCard[3] = { 0, };
 	int PlayerCard[3] = { 0, };
@@ -17,8 +17,8 @@ int main()
 	// 카드 뽑기
 	for (int i = 0; i < 3; i++)
 	{
-		ComputerCard[i] = rand() % 12 + 1;	//1 ~ 12
-		PlayerCard[i] = rand() % 12 + 1;	//1 ~ 12
+		ComputerCard[i] = rand() % 13 + 1;	//1 ~ 13
+		PlayerCard[i] = rand() % 13 + 1;
 	}
 
 	// 카드 내용 출력
@@ -27,13 +27,13 @@ int main()
 	{
 		switch (ComputerCard[i])
 		{
-		case 10:
+		case 11:
 			cout << "J";
 			break;
-		case 11:
+		case 12:
 			cout << "Q";
 			break;
-		case 12:
+		case 13:
 			cout << "K";
 			break;
 		default:
@@ -47,13 +47,13 @@ int main()
 	{
 		switch (PlayerCard[i])
 		{
-		case 10:
+		case 11:
 			cout << "J";
 			break;
-		case 11:
+		case 12:
 			cout << "Q";
 			break;
-		case 12:
+		case 13:
 			cout << "K";
 			break;
 		default:
